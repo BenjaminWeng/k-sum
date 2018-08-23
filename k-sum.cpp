@@ -22,7 +22,7 @@ public:
 
         for (int i = start; i<end; i++)
         {
-            if (i>start && num[i] == num[i - 1]) continue;
+            if (i>start && num[i] == num[i - 1]) continue;//i>start is very important!!
             sol.push_back(num[i]);
             kSum(num, i + 1, end, target - num[i], k - 1, sol, allSol);
             sol.pop_back();
